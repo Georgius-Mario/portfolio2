@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portofolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--navbar start-->
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Computer Science Engginer</p>
+          <h1>Hi, I'm Georgius <span>Mario </span></h1>
+          <p>a passionate backend developer</p>
+        </div>
+      </div>
+    </div>
+    <!--About-->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.png" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+              debitis error fuga, temporibus labore fugiat. Lorem ipsum dolor,
+              sit amet consectetur adipisicing elit. Atque, magni iste. Nesciunt
+              totam veniam asperiores sit velit nostrum! Cum modi id eum natus
+              iusto velit officiis, atque dolorem omnis hic.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX</span><br />Designer Web/App interfaces</li>
+                <li><span>WEB Development</span><br />Web App Development</li>
+                <li>
+                  <span>App Development</span><br />Building Android/ios apps
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2021 - Current</span><br />UI/UX Design Training
+                  Institute
+                </li>
+                <li><span>2019 - 2021</span><br />Team Lead at startup</li>
+                <li><span>2016 -2017</span><br />Intership Tokped</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2017</span><br />Institui new delhi Institute</li>
+                <li><span>2019</span><br />Institui new delhi</li>
+                <li><span>2016</span><br />Institui new delhi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--About END-->
+    <!--Service Start-->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+              tempore repellat, harum temporibus laudantium quidem arc
+            </p>
+            <a href="#">learnmore</a>
+          </div>
+          <div>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+              tempore
+            </p>
+            <a href="#">learnmore</a>
+          </div>
+          <div>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+              tempore repellat, harum temporibus laudantium quidem archite
+            </p>
+            <a href="#">learnmore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
